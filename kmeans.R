@@ -5,9 +5,10 @@
 # Descricao: Implementa uma funcao de ajuste de k-means baseado na distancia
 # e uma classe S4 que retorna o data.frame rotulado e o df de medias estimadas.
 ##################################################################################
-
+  # Pacote utilizados
   library(tidyverse)
   
+  # Simulando dados
   n = 100
   label <-c(rep('A',n),rep('B',n),rep('C',n))
   
@@ -19,11 +20,9 @@
   
   ggplot(data=data) + geom_point(aes(x=x1,y=x2,col=label)) + ggtitle('Gráfico de dispersão') + xlab('Covariável 1')+ ylab('Covariável 2')
   
-  
-  k=3
-  df=data
-  
-  setClass(Class="kmeansModel",
+
+  # Implementando a classe do modelo e a funcao de ajuste
+    setClass(Class="kmeansModel",
            representation(
              df="data.frame",
              means="data.frame"
