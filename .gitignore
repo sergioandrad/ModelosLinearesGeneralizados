@@ -13,6 +13,8 @@
 
 # Output files from R CMD check
 /*.Rcheck/
+/Neural Networks/GANs/frec_files
+/Neural Networks/GANs/gan-getting-started
 
 # RStudio files
 .Rproj.user/
