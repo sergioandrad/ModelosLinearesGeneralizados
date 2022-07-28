@@ -4,3 +4,4 @@
  - Kmeans
  - CART (Classification and regression trees)
  - Partial Least Squares 
+ - Modelo de Ising
