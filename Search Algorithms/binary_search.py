@@ -31,3 +31,19 @@ def rank(x, vec):
 x = 3
 resp = rank(x=x,vec=vec)
 x == vec[resp]
+
+# This way is faster, efficiently computes floor using mod operator
+def search(self, nums: List[int], target: int) -> int:
+    import math
+    L = 0
+    R = len(nums) - 1
+    while (L <= R):
+        LR = L + R
+        m = (LR - (LR % 2)) // 2
+        if nums[m] < target:
+            L = m + 1
+        elif nums[m] > target:
+            R = m - 1
+        else:
+            return (m)
+    return (-1)
